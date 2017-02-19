@@ -7,7 +7,17 @@
 * Gulp
 * Sass
 * Babel ES6
+* Normalize.css
+* Bootstrap v4
 * and other goodies!
+
+##Included fonts
+* Lato
+* Roboto
+* Knewave
+* Ramabhadra
+* Oswald
+* Font Awesome
 
 ##Install
 ```npm install ```

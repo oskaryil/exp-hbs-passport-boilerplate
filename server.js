@@ -46,7 +46,7 @@ app.use(session({
   resave: true
 }));
 
-if(env = 'dev') {
+if(env === 'dev') {
   app.use(morgan('dev'));
 }
 
