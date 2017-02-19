@@ -9,6 +9,7 @@
 * Babel ES6
 * Normalize.css
 * Bootstrap v4
+* Mongoose
 * and other goodies!
 
 ##Included fonts
@@ -18,6 +19,10 @@
 * Ramabhadra
 * Oswald
 * Font Awesome
+
+##Prequisities
+* Node.js v4+
+* MongoDB
 
 ##Install
 ```npm install ```
