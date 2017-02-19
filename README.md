@@ -29,6 +29,8 @@
 
 ##Rename
 ```config.example.json to config.json```
+###Linux users
+```cp config.example.json config.json```
 
 ##Run
 ```npm start```
