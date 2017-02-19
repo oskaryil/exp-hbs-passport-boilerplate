@@ -37,4 +37,4 @@
 ```npm run babel```
 
 ##Compile Sass
-```gulp```
+```run gulp```
