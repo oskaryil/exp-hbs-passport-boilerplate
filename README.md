@@ -4,4 +4,6 @@
 * Express.js
 * Handlebars.js
 * Passport.js
+* Gulp
+* Sass
 * and other goodies!
