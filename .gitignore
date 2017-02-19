@@ -39,3 +39,5 @@ jspm_packages
 # Credentials
 .env
 config/auth.js
+
+config.json

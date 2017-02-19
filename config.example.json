@@ -1,0 +1,32 @@
+{
+  "site":{
+    "port": 3000,
+    "name": "Boilerplate",
+    "slug": "boilerplate",
+    "secret": "exphbs-passport-boilerplate",
+      "oauth": {
+      "host": "http://127.0.0.1",
+      "github": {
+        "clientID": "OAUTH CLIENT ID FOR GITHUB",
+        "clientSecret": "OAUTH CLIENT SECRET FOR GITHUB"
+      },
+      "facebookAuth": {
+        "clientID": "CLIENT_ID",
+        "clientSecret": "CLIENT_SECRET",
+        "callbackURL": "CALLBACK_URL"
+      },
+      "googleAuth": {
+        "clientID": "CLIENT_ID",
+        "clientSecret": "CLIENT_SECRET",
+        "callbackURL": "CALLBACK_URL"
+      }
+    },
+    "analytics": "Analytics SITE ID"
+  },
+  "deploy":{
+    "username": "YOUR USERNAME",
+    "hostname": "YOUR HOSTNAME",
+    "path": "~/path",
+    "screen": "starter"
+  }
+}
