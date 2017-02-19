@@ -27,6 +27,9 @@
 ##Install
 ```npm install ```
 
+##Rename
+```config.example.json to config.json```
+
 ##Run
 ```npm start```
 
