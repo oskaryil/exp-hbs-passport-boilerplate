@@ -4,9 +4,9 @@
     "name": "Boilerplate",
     "slug": "boilerplate",
     "secret": "exphbs-passport-boilerplate",
-      "oauth": {
+      "oAuth": {
       "host": "http://127.0.0.1",
-      "github": {
+      "githubAuth": {
         "clientID": "OAUTH CLIENT ID FOR GITHUB",
         "clientSecret": "OAUTH CLIENT SECRET FOR GITHUB"
       },
