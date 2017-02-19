@@ -31,10 +31,35 @@
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
-  {{> nav}}
+  <div id="wrapper">
 
-  {{{body}}}
+    {{> nav}}
+
+    <div class="container-fluid">
+      <div class="row">
+       {{#if success_msg}}
+        <div class="alert alert-dismissible alert-success fade show">{{success_msg}}</div>
+      {{/if}}
+
+      {{#if error_msg}}
+        <div class="alert alert-dismissible alert-danger fade show">{{error_msg}}</div>
+      {{/if}}
+
+      {{#if error}}
+        <div class="alert alert-dismissible alert-danger fade show">{{error}}</div>
+      {{/if}}
+      {{#if errors}}
+            {{#each errors}}
+              <div class="alert alert-danger fade show" role="alert">{{msg}}</div>
+            {{/each}}
+      {{/if}}
+{{!--         <div class="alert alert-dismissible" id="status-area"></div> --}}
+        {{{body}}}
+      </div>
+    </div>
+  </div>
   <script src="/assets/js/jquery-3.1.1.min.js"></script>
+  <script src="/assets/bootstrap/js/tether.min.js"></script>
   <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
   <script src="/assets/js/app.js"></script>
   {{#if script}}
