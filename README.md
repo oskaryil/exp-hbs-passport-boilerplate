@@ -49,3 +49,6 @@
 
 ### JS Compiles from /public/assets/js/src/ to /public/assets/js/dist/
 ### SCSS Compiles from /public/assets/sass/ to /public/assets/css/
+
+# License
+[MIT](https://opensource.org/licenses/MIT) - &copy; Oskar Yildiz 2017
