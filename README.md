@@ -1,18 +1,21 @@
-# exp-hbs-passport-boilerplate
+# Express handlebars passport boilerplate
 
-##Boilerplate includes:
+### A boilerplate for quickly getting up and running with express, passportjs authentication, mongodb and handlebars.
+
+
+## Boilerplate includes:
 * Express.js
 * Handlebars.js
 * Passport.js
 * Gulp
 * Sass
-* Babel ES6
+* Babel ES6 - es2015
 * Normalize.css
 * Bootstrap v4
 * Mongoose
 * and other goodies!
 
-##Included fonts
+## Included fonts
 * Lato
 * Roboto
 * Knewave
@@ -20,23 +23,29 @@
 * Oswald
 * Font Awesome
 
-##Prequisities
+## Prequisities
 * Node.js v4+
 * MongoDB
 
-##Install
+## Install
 ```npm install ```
 
-##Rename
+## Rename
 ```config.example.json to config.json```
-###Linux users
+### Linux users
 ```cp config.example.json config.json```
 
-##Run
+## Run
 ```npm start```
 
-##Compile ES6
-```npm run babel```
+## Compile ES6
+```gulp js```
 
-##Compile Sass
-```gulp ```
+## Compile Sass
+```gulp sass```
+
+## Watch for changes in .js /public/assets/js/src/ & .scss /public/assets/sass/
+```gulp watch```
+
+### JS Compiles from /public/assets/js/src/ to /public/assets/js/dist/
+### SCSS Compiles from /public/assets/sass/ to /public/assets/css/
