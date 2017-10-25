@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const UserController = require('../controllers/user.controller.js');
+const config = require('../config.json');
 
 router.get('/', function(req, res) {
   res.render('index', {
