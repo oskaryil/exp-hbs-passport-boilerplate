@@ -54,8 +54,8 @@ or
 ## Watch for changes in .js /public/assets/js/src/ & .scss /public/assets/sass/
 `$ gulp watch`
 
-### JS Compiles from /public/assets/js/src/ to /public/assets/js/dist/
-### SCSS Compiles from /public/assets/sass/ to /public/assets/css/
+### JS Compiles from `/public/assets/js/src/` to `/public/assets/js/dist/`
+### SCSS Compiles from `/public/assets/sass/` to `/public/assets/css/`
 
 # License
 [MIT](https://opensource.org/licenses/MIT) 
