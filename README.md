@@ -26,29 +26,36 @@
 ## Prequisities
 * Node.js v4+
 * MongoDB
+* Yarn (optional)
 
 ## Install
-```npm install ```
+If you use NPM:
+`$ npm install`
+
+If you use yarn:
+`$ yarn install -D`
 
 ## Rename
-```config.example.json to config.json```
+`config.example.json to config.json`
 ### Linux users
-```cp config.example.json config.json```
+`$ cp config.example.json config.json`
 
 ## Run
-```npm start```
+`$ npm start`
+or
+`$ yarn start`
 
 ## Compile ES6
-```gulp js```
+`$ gulp js`
 
 ## Compile Sass
-```gulp sass```
+`$ gulp sass`
 
 ## Watch for changes in .js /public/assets/js/src/ & .scss /public/assets/sass/
-```gulp watch```
+`$ gulp watch`
 
 ### JS Compiles from /public/assets/js/src/ to /public/assets/js/dist/
 ### SCSS Compiles from /public/assets/sass/ to /public/assets/css/
 
 # License
-[MIT](https://opensource.org/licenses/MIT) - &copy; Oskar Yildiz 2017
+[MIT](https://opensource.org/licenses/MIT) 
