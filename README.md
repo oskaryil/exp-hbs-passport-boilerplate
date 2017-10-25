@@ -1,5 +1,7 @@
 # Express handlebars passport boilerplate
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/oskaryil/exp-hbs-passport-boilerplate.svg)](https://greenkeeper.io/)
+
 ### A boilerplate for quickly getting up and running with express, passportjs authentication, mongodb and handlebars.
 
 
