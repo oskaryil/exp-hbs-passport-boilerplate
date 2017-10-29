@@ -26,7 +26,7 @@ module.exports = function(passport) {
 
         User.comparePassword(password, user.local.password, function(
           err,
-          isMatch,
+          isMatch
         ) {
           if (err) throw err;
           if (isMatch) {
@@ -36,7 +36,7 @@ module.exports = function(passport) {
           }
         });
       });
-    }),
+    })
   );
 
   passport.use(
@@ -45,7 +45,7 @@ module.exports = function(passport) {
         clientID: configAuth.oAuth.facebookAuth.clientID,
         clientSecret: configAuth.oAuth.facebookAuth.clientSecret,
         callbackURL: configAuth.oAuth.facebookAuth.callbackURL,
-        profileFields: ['id', 'emails', 'name'],
+        profileFields: ['id', 'emails', 'name']
       },
       function(accessToken, refreshToken, profile, done) {
         process.nextTick(function() {
@@ -70,8 +70,8 @@ module.exports = function(passport) {
             }
           });
         });
-      },
-    ),
+      }
+    )
   );
 
   passport.use(
@@ -79,7 +79,7 @@ module.exports = function(passport) {
       {
         clientID: configAuth.oAuth.googleAuth.clientID,
         clientSecret: configAuth.oAuth.googleAuth.clientSecret,
-        callbackURL: configAuth.oAuth.googleAuth.callbackURL,
+        callbackURL: configAuth.oAuth.googleAuth.callbackURL
       },
       function(accessToken, refreshToken, profile, done) {
         process.nextTick(function() {
@@ -103,8 +103,8 @@ module.exports = function(passport) {
             }
           });
         });
-      },
-    ),
+      }
+    )
   );
 
   passport.use(
@@ -112,7 +112,7 @@ module.exports = function(passport) {
       {
         clientID: configAuth.oAuth.githubAuth.clientID,
         clientSecret: configAuth.oAuth.githubAuth.clientSecret,
-        callbackURL: configAuth.oAuth.githubAuth.callbackURL,
+        callbackURL: configAuth.oAuth.githubAuth.callbackURL
       },
       function(accessToken, refreshToken, profile, done) {
         process.nextTick(function() {
@@ -141,7 +141,7 @@ module.exports = function(passport) {
             }
           });
         });
-      },
-    ),
+      }
+    )
   );
 };

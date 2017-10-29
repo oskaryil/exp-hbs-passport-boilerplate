@@ -5,7 +5,7 @@ const config = require('../config/constants');
 
 const login = (req, res) => {
   res.render('login', {
-    title: 'Login | ' + config.site.name,
+    title: 'Login | ' + config.site.name
   });
 };
 
@@ -16,7 +16,7 @@ const postLogin = (req, res, next) => {
   const errors = req.validationErrors();
   if (errors) {
     res.render('login', {
-      errors: errors,
+      errors: errors
     });
     return res.redirect('/login');
   }
@@ -41,7 +41,7 @@ const postLogin = (req, res, next) => {
 
 const signup = (req, res) => {
   res.render('register', {
-    title: 'Sign up | ' + config.site.name,
+    title: 'Sign up | ' + config.site.name
   });
 };
 
@@ -65,7 +65,7 @@ const postSignup = (req, res, next) => {
   if (errors) {
     res.render('register', {
       title: 'Sign up | ' + config.site.name,
-      errors: errors,
+      errors: errors
     });
   } else {
     var newUser = new User();
@@ -90,5 +90,5 @@ module.exports = {
   login,
   signup,
   postLogin,
-  postSignup,
+  postSignup
 };

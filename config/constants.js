@@ -1,13 +1,13 @@
 require('dotenv').config();
 
 const devConfig = {
-  MONGO_URL: process.env.MONGO_URL_DEV,
+  MONGO_URL: process.env.MONGO_URL_DEV
 };
 
 const testConfig = {};
 
 const prodConfig = {
-  MONGO_URL: process.env.MONGO_URL_PROD,
+  MONGO_URL: process.env.MONGO_URL_PROD
 };
 
 const defaultConfig = {
@@ -20,21 +20,21 @@ const defaultConfig = {
       host: process.env.OAUTH_HOST,
       githubAuth: {
         clientID: process.env.GITHUB_AUTH_CLIENT_ID,
-        clientSecret: process.env.GITHUB_AUTH_CLIENT_SECRET,
+        clientSecret: process.env.GITHUB_AUTH_CLIENT_SECRET
       },
       facebookAuth: {
         clientID: process.env.FACEBOOK_AUTH_CLIENT_ID,
         clientSecret: process.env.FACEBOOK_AUTH_CLIENT_SECRET,
-        callbackURL: process.env.FACEBOOK_AUTH_CALLBACK_URL,
+        callbackURL: process.env.FACEBOOK_AUTH_CALLBACK_URL
       },
       googleAuth: {
         clientID: process.env.GOOGLE_AUTH_CLIENT_ID,
         clientSecret: process.env.GOOGLE_AUTH_CLIENT_SECRET,
-        callbackURL: process.env.GOOGLE_AUTH_CALLBACK_URL,
-      },
+        callbackURL: process.env.GOOGLE_AUTH_CALLBACK_URL
+      }
     },
-    analytics: process.env.ANALYTICS,
-  },
+    analytics: process.env.ANALYTICS
+  }
 };
 
 function envConfig(env) {

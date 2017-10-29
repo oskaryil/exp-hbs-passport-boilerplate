@@ -6,7 +6,7 @@
 
 if (typeof jQuery === 'undefined') {
   throw new Error(
-    "Bootstrap's JavaScript requires jQuery. jQuery must be included before Bootstrap's JavaScript.",
+    "Bootstrap's JavaScript requires jQuery. jQuery must be included before Bootstrap's JavaScript."
   );
 }
 
@@ -18,7 +18,7 @@ if (typeof jQuery === 'undefined') {
     version[0] >= 4
   ) {
     throw new Error(
-      "Bootstrap's JavaScript requires at least jQuery v1.9.1 but less than v4.0.0",
+      "Bootstrap's JavaScript requires at least jQuery v1.9.1 but less than v4.0.0"
     );
   }
 })(jQuery);
@@ -58,7 +58,7 @@ if (typeof jQuery === 'undefined') {
   function _possibleConstructorReturn(self, call) {
     if (!self) {
       throw new ReferenceError(
-        "this hasn't been initialised - super() hasn't been called",
+        "this hasn't been initialised - super() hasn't been called"
       );
     }
     return call && (typeof call === 'object' || typeof call === 'function')
@@ -70,7 +70,7 @@ if (typeof jQuery === 'undefined') {
     if (typeof superClass !== 'function' && superClass !== null) {
       throw new TypeError(
         'Super expression must either be null or a function, not ' +
-          typeof superClass,
+          typeof superClass
       );
     }
     subClass.prototype = Object.create(superClass && superClass.prototype, {
@@ -78,8 +78,8 @@ if (typeof jQuery === 'undefined') {
         value: subClass,
         enumerable: false,
         writable: true,
-        configurable: true,
-      },
+        configurable: true
+      }
     });
     if (superClass)
       Object.setPrototypeOf
@@ -115,7 +115,7 @@ if (typeof jQuery === 'undefined') {
       WebkitTransition: 'webkitTransitionEnd',
       MozTransition: 'transitionend',
       OTransition: 'oTransitionEnd otransitionend',
-      transition: 'transitionend',
+      transition: 'transitionend'
     };
 
     // shoutout AngusCroll (https://goo.gl/pxwQGp)
@@ -139,7 +139,7 @@ if (typeof jQuery === 'undefined') {
             return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
           }
           return undefined;
-        },
+        }
       };
     }
 
@@ -153,7 +153,7 @@ if (typeof jQuery === 'undefined') {
       for (var name in TransitionEndEvent) {
         if (el.style[name] !== undefined) {
           return {
-            end: TransitionEndEvent[name],
+            end: TransitionEndEvent[name]
           };
         }
       }
@@ -227,7 +227,7 @@ if (typeof jQuery === 'undefined') {
       typeCheckConfig: function typeCheckConfig(
         componentName,
         config,
-        configTypes,
+        configTypes
       ) {
         for (var property in configTypes) {
           if (configTypes.hasOwnProperty(property)) {
@@ -245,12 +245,12 @@ if (typeof jQuery === 'undefined') {
                     '" provided type "' +
                     valueType +
                     '" ') +
-                  ('but expected type "' + expectedTypes + '".'),
+                  ('but expected type "' + expectedTypes + '".')
               );
             }
           }
         }
-      },
+      }
     };
 
     setTransitionEndSupport();
@@ -281,19 +281,19 @@ if (typeof jQuery === 'undefined') {
     var TRANSITION_DURATION = 150;
 
     var Selector = {
-      DISMISS: '[data-dismiss="alert"]',
+      DISMISS: '[data-dismiss="alert"]'
     };
 
     var Event = {
       CLOSE: 'close' + EVENT_KEY,
       CLOSED: 'closed' + EVENT_KEY,
-      CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY,
+      CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
     };
 
     var ClassName = {
       ALERT: 'alert',
       FADE: 'fade',
-      SHOW: 'show',
+      SHOW: 'show'
     };
 
     /**
@@ -349,7 +349,7 @@ if (typeof jQuery === 'undefined') {
       };
 
       Alert.prototype._triggerCloseEvent = function _triggerCloseEvent(
-        element,
+        element
       ) {
         var closeEvent = $.Event(Event.CLOSE);
 
@@ -417,8 +417,8 @@ if (typeof jQuery === 'undefined') {
           key: 'VERSION',
           get: function get() {
             return VERSION;
-          },
-        },
+          }
+        }
       ]);
 
       return Alert;
@@ -433,7 +433,7 @@ if (typeof jQuery === 'undefined') {
     $(document).on(
       Event.CLICK_DATA_API,
       Selector.DISMISS,
-      Alert._handleDismiss(new Alert()),
+      Alert._handleDismiss(new Alert())
     );
 
     /**
@@ -476,7 +476,7 @@ if (typeof jQuery === 'undefined') {
     var ClassName = {
       ACTIVE: 'active',
       BUTTON: 'btn',
-      FOCUS: 'focus',
+      FOCUS: 'focus'
     };
 
     var Selector = {
@@ -484,7 +484,7 @@ if (typeof jQuery === 'undefined') {
       DATA_TOGGLE: '[data-toggle="buttons"]',
       INPUT: 'input',
       ACTIVE: '.active',
-      BUTTON: '.btn',
+      BUTTON: '.btn'
     };
 
     var Event = {
@@ -494,7 +494,7 @@ if (typeof jQuery === 'undefined') {
         EVENT_KEY +
         DATA_API_KEY +
         ' ' +
-        ('blur' + EVENT_KEY + DATA_API_KEY),
+        ('blur' + EVENT_KEY + DATA_API_KEY)
     };
 
     /**
@@ -548,7 +548,7 @@ if (typeof jQuery === 'undefined') {
 
         this._element.setAttribute(
           'aria-pressed',
-          !$(this._element).hasClass(ClassName.ACTIVE),
+          !$(this._element).hasClass(ClassName.ACTIVE)
         );
 
         if (triggerChangeEvent) {
@@ -583,8 +583,8 @@ if (typeof jQuery === 'undefined') {
           key: 'VERSION',
           get: function get() {
             return VERSION;
-          },
-        },
+          }
+        }
       ]);
 
       return Button;
@@ -609,7 +609,7 @@ if (typeof jQuery === 'undefined') {
         Button._jQueryInterface.call($(button), 'toggle');
       })
       .on(Event.FOCUS_BLUR_DATA_API, Selector.DATA_TOGGLE_CARROT, function(
-        event,
+        event
       ) {
         var button = $(event.target).closest(Selector.BUTTON)[0];
         $(button).toggleClass(ClassName.FOCUS, /^focus(in)?$/.test(event.type));
@@ -660,7 +660,7 @@ if (typeof jQuery === 'undefined') {
       keyboard: true,
       slide: false,
       pause: 'hover',
-      wrap: true,
+      wrap: true
     };
 
     var DefaultType = {
@@ -668,14 +668,14 @@ if (typeof jQuery === 'undefined') {
       keyboard: 'boolean',
       slide: '(boolean|string)',
       pause: '(string|boolean)',
-      wrap: 'boolean',
+      wrap: 'boolean'
     };
 
     var Direction = {
       NEXT: 'next',
       PREV: 'prev',
       LEFT: 'left',
-      RIGHT: 'right',
+      RIGHT: 'right'
     };
 
     var Event = {
@@ -685,7 +685,7 @@ if (typeof jQuery === 'undefined') {
       MOUSEENTER: 'mouseenter' + EVENT_KEY,
       MOUSELEAVE: 'mouseleave' + EVENT_KEY,
       LOAD_DATA_API: 'load' + EVENT_KEY + DATA_API_KEY,
-      CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY,
+      CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
     };
 
     var ClassName = {
@@ -696,7 +696,7 @@ if (typeof jQuery === 'undefined') {
       LEFT: 'carousel-item-left',
       NEXT: 'carousel-item-next',
       PREV: 'carousel-item-prev',
-      ITEM: 'carousel-item',
+      ITEM: 'carousel-item'
     };
 
     var Selector = {
@@ -706,7 +706,7 @@ if (typeof jQuery === 'undefined') {
       NEXT_PREV: '.carousel-item-next, .carousel-item-prev',
       INDICATORS: '.carousel-indicators',
       DATA_SLIDE: '[data-slide], [data-slide-to]',
-      DATA_RIDE: '[data-ride="carousel"]',
+      DATA_RIDE: '[data-ride="carousel"]'
     };
 
     /**
@@ -788,9 +788,9 @@ if (typeof jQuery === 'undefined') {
         if (this._config.interval && !this._isPaused) {
           this._interval = setInterval(
             (document.visibilityState ? this.nextWhenVisible : this.next).bind(
-              this,
+              this
             ),
-            this._config.interval,
+            this._config.interval
           );
         }
       };
@@ -893,14 +893,14 @@ if (typeof jQuery === 'undefined') {
         this._items = $.makeArray(
           $(element)
             .parent()
-            .find(Selector.ITEM),
+            .find(Selector.ITEM)
         );
         return this._items.indexOf(element);
       };
 
       Carousel.prototype._getItemByDirection = function _getItemByDirection(
         direction,
-        activeElement,
+        activeElement
       ) {
         var isNextDirection = direction === Direction.NEXT;
         var isPrevDirection = direction === Direction.PREVIOUS;
@@ -924,11 +924,11 @@ if (typeof jQuery === 'undefined') {
 
       Carousel.prototype._triggerSlideEvent = function _triggerSlideEvent(
         relatedTarget,
-        eventDirectionName,
+        eventDirectionName
       ) {
         var slideEvent = $.Event(Event.SLIDE, {
           relatedTarget: relatedTarget,
-          direction: eventDirectionName,
+          direction: eventDirectionName
         });
 
         $(this._element).trigger(slideEvent);
@@ -937,7 +937,7 @@ if (typeof jQuery === 'undefined') {
       };
 
       Carousel.prototype._setActiveIndicatorElement = function _setActiveIndicatorElement(
-        element,
+        element
       ) {
         if (this._indicatorsElement) {
           $(this._indicatorsElement)
@@ -985,7 +985,7 @@ if (typeof jQuery === 'undefined') {
 
         var slideEvent = this._triggerSlideEvent(
           nextElement,
-          eventDirectionName,
+          eventDirectionName
         );
         if (slideEvent.isDefaultPrevented()) {
           return;
@@ -1006,7 +1006,7 @@ if (typeof jQuery === 'undefined') {
 
         var slidEvent = $.Event(Event.SLID, {
           relatedTarget: nextElement,
-          direction: eventDirectionName,
+          direction: eventDirectionName
         });
 
         if (
@@ -1031,7 +1031,7 @@ if (typeof jQuery === 'undefined') {
                   ' ' +
                   orderClassName +
                   ' ' +
-                  directionalClassName,
+                  directionalClassName
               );
 
               _this5._isSliding = false;
@@ -1125,14 +1125,14 @@ if (typeof jQuery === 'undefined') {
           key: 'VERSION',
           get: function get() {
             return VERSION;
-          },
+          }
         },
         {
           key: 'Default',
           get: function get() {
             return Default;
-          },
-        },
+          }
+        }
       ]);
 
       return Carousel;
@@ -1147,7 +1147,7 @@ if (typeof jQuery === 'undefined') {
     $(document).on(
       Event.CLICK_DATA_API,
       Selector.DATA_SLIDE,
-      Carousel._dataApiClickHandler,
+      Carousel._dataApiClickHandler
     );
 
     $(window).on(Event.LOAD_DATA_API, function() {
@@ -1197,12 +1197,12 @@ if (typeof jQuery === 'undefined') {
 
     var Default = {
       toggle: true,
-      parent: '',
+      parent: ''
     };
 
     var DefaultType = {
       toggle: 'boolean',
-      parent: 'string',
+      parent: 'string'
     };
 
     var Event = {
@@ -1210,24 +1210,24 @@ if (typeof jQuery === 'undefined') {
       SHOWN: 'shown' + EVENT_KEY,
       HIDE: 'hide' + EVENT_KEY,
       HIDDEN: 'hidden' + EVENT_KEY,
-      CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY,
+      CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
     };
 
     var ClassName = {
       SHOW: 'show',
       COLLAPSE: 'collapse',
       COLLAPSING: 'collapsing',
-      COLLAPSED: 'collapsed',
+      COLLAPSED: 'collapsed'
     };
 
     var Dimension = {
       WIDTH: 'width',
-      HEIGHT: 'height',
+      HEIGHT: 'height'
     };
 
     var Selector = {
       ACTIVES: '.card > .show, .card > .collapsing',
-      DATA_TOGGLE: '[data-toggle="collapse"]',
+      DATA_TOGGLE: '[data-toggle="collapse"]'
     };
 
     /**
@@ -1248,8 +1248,8 @@ if (typeof jQuery === 'undefined') {
             '[data-toggle="collapse"][href="#' +
               element.id +
               '"],' +
-              ('[data-toggle="collapse"][data-target="#' + element.id + '"]'),
-          ),
+              ('[data-toggle="collapse"][data-target="#' + element.id + '"]')
+          )
         );
 
         this._parent = this._config.parent ? this._getParent() : null;
@@ -1423,7 +1423,7 @@ if (typeof jQuery === 'undefined') {
       };
 
       Collapse.prototype.setTransitioning = function setTransitioning(
-        isTransitioning,
+        isTransitioning
       ) {
         this._isTransitioning = isTransitioning;
       };
@@ -1464,7 +1464,7 @@ if (typeof jQuery === 'undefined') {
           .each(function(i, element) {
             _this8._addAriaAndCollapsedClass(
               Collapse._getTargetFromElement(element),
-              [element],
+              [element]
             );
           });
 
@@ -1473,7 +1473,7 @@ if (typeof jQuery === 'undefined') {
 
       Collapse.prototype._addAriaAndCollapsedClass = function _addAriaAndCollapsedClass(
         element,
-        triggerArray,
+        triggerArray
       ) {
         if (element) {
           var isOpen = $(element).hasClass(ClassName.SHOW);
@@ -1503,7 +1503,7 @@ if (typeof jQuery === 'undefined') {
             Default,
             $this.data(),
             (typeof config === 'undefined' ? 'undefined' : _typeof(config)) ===
-              'object' && config,
+              'object' && config
           );
 
           if (!data && _config.toggle && /show|hide/.test(config)) {
@@ -1529,14 +1529,14 @@ if (typeof jQuery === 'undefined') {
           key: 'VERSION',
           get: function get() {
             return VERSION;
-          },
+          }
         },
         {
           key: 'Default',
           get: function get() {
             return Default;
-          },
-        },
+          }
+        }
       ]);
 
       return Collapse;
@@ -1607,13 +1607,13 @@ if (typeof jQuery === 'undefined') {
       CLICK: 'click' + EVENT_KEY,
       CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY,
       FOCUSIN_DATA_API: 'focusin' + EVENT_KEY + DATA_API_KEY,
-      KEYDOWN_DATA_API: 'keydown' + EVENT_KEY + DATA_API_KEY,
+      KEYDOWN_DATA_API: 'keydown' + EVENT_KEY + DATA_API_KEY
     };
 
     var ClassName = {
       BACKDROP: 'dropdown-backdrop',
       DISABLED: 'disabled',
-      SHOW: 'show',
+      SHOW: 'show'
     };
 
     var Selector = {
@@ -1625,7 +1625,7 @@ if (typeof jQuery === 'undefined') {
       NAVBAR_NAV: '.navbar-nav',
       VISIBLE_ITEMS:
         '[role="menu"] li:not(.disabled) a, ' +
-        '[role="listbox"] li:not(.disabled) a',
+        '[role="listbox"] li:not(.disabled) a'
     };
 
     /**
@@ -1673,7 +1673,7 @@ if (typeof jQuery === 'undefined') {
         }
 
         var relatedTarget = {
-          relatedTarget: this,
+          relatedTarget: this
         };
         var showEvent = $.Event(Event.SHOW, relatedTarget);
 
@@ -1739,7 +1739,7 @@ if (typeof jQuery === 'undefined') {
         for (var i = 0; i < toggles.length; i++) {
           var parent = Dropdown._getParentFromElement(toggles[i]);
           var relatedTarget = {
-            relatedTarget: toggles[i],
+            relatedTarget: toggles[i]
           };
 
           if (!$(parent).hasClass(ClassName.SHOW)) {
@@ -1844,8 +1844,8 @@ if (typeof jQuery === 'undefined') {
           key: 'VERSION',
           get: function get() {
             return VERSION;
-          },
-        },
+          }
+        }
       ]);
 
       return Dropdown;
@@ -1861,21 +1861,21 @@ if (typeof jQuery === 'undefined') {
       .on(
         Event.KEYDOWN_DATA_API,
         Selector.DATA_TOGGLE,
-        Dropdown._dataApiKeydownHandler,
+        Dropdown._dataApiKeydownHandler
       )
       .on(
         Event.KEYDOWN_DATA_API,
         Selector.ROLE_MENU,
-        Dropdown._dataApiKeydownHandler,
+        Dropdown._dataApiKeydownHandler
       )
       .on(
         Event.KEYDOWN_DATA_API,
         Selector.ROLE_LISTBOX,
-        Dropdown._dataApiKeydownHandler,
+        Dropdown._dataApiKeydownHandler
       )
       .on(
         Event.CLICK_DATA_API + ' ' + Event.FOCUSIN_DATA_API,
-        Dropdown._clearMenus,
+        Dropdown._clearMenus
       )
       .on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, Dropdown.prototype.toggle)
       .on(Event.CLICK_DATA_API, Selector.FORM_CHILD, function(e) {
@@ -1926,14 +1926,14 @@ if (typeof jQuery === 'undefined') {
       backdrop: true,
       keyboard: true,
       focus: true,
-      show: true,
+      show: true
     };
 
     var DefaultType = {
       backdrop: '(boolean|string)',
       keyboard: 'boolean',
       focus: 'boolean',
-      show: 'boolean',
+      show: 'boolean'
     };
 
     var Event = {
@@ -1947,7 +1947,7 @@ if (typeof jQuery === 'undefined') {
       KEYDOWN_DISMISS: 'keydown.dismiss' + EVENT_KEY,
       MOUSEUP_DISMISS: 'mouseup.dismiss' + EVENT_KEY,
       MOUSEDOWN_DISMISS: 'mousedown.dismiss' + EVENT_KEY,
-      CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY,
+      CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
     };
 
     var ClassName = {
@@ -1955,14 +1955,14 @@ if (typeof jQuery === 'undefined') {
       BACKDROP: 'modal-backdrop',
       OPEN: 'modal-open',
       FADE: 'fade',
-      SHOW: 'show',
+      SHOW: 'show'
     };
 
     var Selector = {
       DIALOG: '.modal-dialog',
       DATA_TOGGLE: '[data-toggle="modal"]',
       DATA_DISMISS: '[data-dismiss="modal"]',
-      FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top',
+      FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top'
     };
 
     /**
@@ -2009,7 +2009,7 @@ if (typeof jQuery === 'undefined') {
           this._isTransitioning = true;
         }
         var showEvent = $.Event(Event.SHOW, {
-          relatedTarget: relatedTarget,
+          relatedTarget: relatedTarget
         });
 
         $(this._element).trigger(showEvent);
@@ -2033,7 +2033,7 @@ if (typeof jQuery === 'undefined') {
           Selector.DATA_DISMISS,
           function(event) {
             return _this9.hide(event);
-          },
+          }
         );
 
         $(this._dialog).on(Event.MOUSEDOWN_DISMISS, function() {
@@ -2151,7 +2151,7 @@ if (typeof jQuery === 'undefined') {
         }
 
         var shownEvent = $.Event(Event.SHOWN, {
-          relatedTarget: relatedTarget,
+          relatedTarget: relatedTarget
         });
 
         var transitionComplete = function transitionComplete() {
@@ -2346,7 +2346,7 @@ if (typeof jQuery === 'undefined') {
       Modal.prototype._setScrollbar = function _setScrollbar() {
         var bodyPadding = parseInt(
           $(Selector.FIXED_CONTENT).css('padding-right') || 0,
-          10,
+          10
         );
 
         this._originalBodyPadding = document.body.style.paddingRight || '';
@@ -2375,7 +2375,7 @@ if (typeof jQuery === 'undefined') {
 
       Modal._jQueryInterface = function _jQueryInterface(
         config,
-        relatedTarget,
+        relatedTarget
       ) {
         return this.each(function() {
           var data = $(this).data(DATA_KEY);
@@ -2384,7 +2384,7 @@ if (typeof jQuery === 'undefined') {
             Modal.Default,
             $(this).data(),
             (typeof config === 'undefined' ? 'undefined' : _typeof(config)) ===
-              'object' && config,
+              'object' && config
           );
 
           if (!data) {
@@ -2408,14 +2408,14 @@ if (typeof jQuery === 'undefined') {
           key: 'VERSION',
           get: function get() {
             return VERSION;
-          },
+          }
         },
         {
           key: 'Default',
           get: function get() {
             return Default;
-          },
-        },
+          }
+        }
       ]);
 
       return Modal;
@@ -2501,19 +2501,19 @@ if (typeof jQuery === 'undefined') {
     var Default = {
       offset: 10,
       method: 'auto',
-      target: '',
+      target: ''
     };
 
     var DefaultType = {
       offset: 'number',
       method: 'string',
-      target: '(string|element)',
+      target: '(string|element)'
     };
 
     var Event = {
       ACTIVATE: 'activate' + EVENT_KEY,
       SCROLL: 'scroll' + EVENT_KEY,
-      LOAD_DATA_API: 'load' + EVENT_KEY + DATA_API_KEY,
+      LOAD_DATA_API: 'load' + EVENT_KEY + DATA_API_KEY
     };
 
     var ClassName = {
@@ -2521,7 +2521,7 @@ if (typeof jQuery === 'undefined') {
       DROPDOWN_MENU: 'dropdown-menu',
       NAV_LINK: 'nav-link',
       NAV: 'nav',
-      ACTIVE: 'active',
+      ACTIVE: 'active'
     };
 
     var Selector = {
@@ -2533,12 +2533,12 @@ if (typeof jQuery === 'undefined') {
       NAV_LINKS: '.nav-link',
       DROPDOWN: '.dropdown',
       DROPDOWN_ITEMS: '.dropdown-item',
-      DROPDOWN_TOGGLE: '.dropdown-toggle',
+      DROPDOWN_TOGGLE: '.dropdown-toggle'
     };
 
     var OffsetMethod = {
       OFFSET: 'offset',
-      POSITION: 'position',
+      POSITION: 'position'
     };
 
     /**
@@ -2613,7 +2613,7 @@ if (typeof jQuery === 'undefined') {
               // todo (fat): remove sketch reliance on jQuery position/offset
               return [
                 $(target)[offsetMethod]().top + offsetBase,
-                targetSelector,
+                targetSelector
               ];
             }
             return null;
@@ -2674,7 +2674,7 @@ if (typeof jQuery === 'undefined') {
           this._scrollElement.scrollHeight ||
           Math.max(
             document.body.scrollHeight,
-            document.documentElement.scrollHeight,
+            document.documentElement.scrollHeight
           )
         );
       };
@@ -2761,7 +2761,7 @@ if (typeof jQuery === 'undefined') {
         }
 
         $(this._scrollElement).trigger(Event.ACTIVATE, {
-          relatedTarget: target,
+          relatedTarget: target
         });
       };
 
@@ -2799,14 +2799,14 @@ if (typeof jQuery === 'undefined') {
           key: 'VERSION',
           get: function get() {
             return VERSION;
-          },
+          }
         },
         {
           key: 'Default',
           get: function get() {
             return Default;
-          },
-        },
+          }
+        }
       ]);
 
       return ScrollSpy;
@@ -2870,7 +2870,7 @@ if (typeof jQuery === 'undefined') {
       HIDDEN: 'hidden' + EVENT_KEY,
       SHOW: 'show' + EVENT_KEY,
       SHOWN: 'shown' + EVENT_KEY,
-      CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY,
+      CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
     };
 
     var ClassName = {
@@ -2878,7 +2878,7 @@ if (typeof jQuery === 'undefined') {
       ACTIVE: 'active',
       DISABLED: 'disabled',
       FADE: 'fade',
-      SHOW: 'show',
+      SHOW: 'show'
     };
 
     var Selector = {
@@ -2892,7 +2892,7 @@ if (typeof jQuery === 'undefined') {
       ACTIVE_CHILD: '> .nav-item > .active, > .active',
       DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"]',
       DROPDOWN_TOGGLE: '.dropdown-toggle',
-      DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active',
+      DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
     };
 
     /**
@@ -2935,11 +2935,11 @@ if (typeof jQuery === 'undefined') {
         }
 
         var hideEvent = $.Event(Event.HIDE, {
-          relatedTarget: this._element,
+          relatedTarget: this._element
         });
 
         var showEvent = $.Event(Event.SHOW, {
-          relatedTarget: previous,
+          relatedTarget: previous
         });
 
         if (previous) {
@@ -2960,11 +2960,11 @@ if (typeof jQuery === 'undefined') {
 
         var complete = function complete() {
           var hiddenEvent = $.Event(Event.HIDDEN, {
-            relatedTarget: _this20._element,
+            relatedTarget: _this20._element
           });
 
           var shownEvent = $.Event(Event.SHOWN, {
-            relatedTarget: previous,
+            relatedTarget: previous
           });
 
           $(previous).trigger(hiddenEvent);
@@ -2988,7 +2988,7 @@ if (typeof jQuery === 'undefined') {
       Tab.prototype._activate = function _activate(
         element,
         container,
-        callback,
+        callback
       ) {
         var _this21 = this;
 
@@ -3004,7 +3004,7 @@ if (typeof jQuery === 'undefined') {
             element,
             active,
             isTransitioning,
-            callback,
+            callback
           );
         };
 
@@ -3025,13 +3025,13 @@ if (typeof jQuery === 'undefined') {
         element,
         active,
         isTransitioning,
-        callback,
+        callback
       ) {
         if (active) {
           $(active).removeClass(ClassName.ACTIVE);
 
           var dropdownChild = $(active.parentNode).find(
-            Selector.DROPDOWN_ACTIVE_CHILD,
+            Selector.DROPDOWN_ACTIVE_CHILD
           )[0];
 
           if (dropdownChild) {
@@ -3096,8 +3096,8 @@ if (typeof jQuery === 'undefined') {
           key: 'VERSION',
           get: function get() {
             return VERSION;
-          },
-        },
+          }
+        }
       ]);
 
       return Tab;
@@ -3175,7 +3175,7 @@ if (typeof jQuery === 'undefined') {
       placement: 'top',
       offset: '0 0',
       constraints: [],
-      container: false,
+      container: false
     };
 
     var DefaultType = {
@@ -3189,19 +3189,19 @@ if (typeof jQuery === 'undefined') {
       placement: '(string|function)',
       offset: 'string',
       constraints: 'array',
-      container: '(string|element|boolean)',
+      container: '(string|element|boolean)'
     };
 
     var AttachmentMap = {
       TOP: 'bottom center',
       RIGHT: 'middle left',
       BOTTOM: 'top center',
-      LEFT: 'middle right',
+      LEFT: 'middle right'
     };
 
     var HoverState = {
       SHOW: 'show',
-      OUT: 'out',
+      OUT: 'out'
     };
 
     var Event = {
@@ -3214,29 +3214,29 @@ if (typeof jQuery === 'undefined') {
       FOCUSIN: 'focusin' + EVENT_KEY,
       FOCUSOUT: 'focusout' + EVENT_KEY,
       MOUSEENTER: 'mouseenter' + EVENT_KEY,
-      MOUSELEAVE: 'mouseleave' + EVENT_KEY,
+      MOUSELEAVE: 'mouseleave' + EVENT_KEY
     };
 
     var ClassName = {
       FADE: 'fade',
-      SHOW: 'show',
+      SHOW: 'show'
     };
 
     var Selector = {
       TOOLTIP: '.tooltip',
-      TOOLTIP_INNER: '.tooltip-inner',
+      TOOLTIP_INNER: '.tooltip-inner'
     };
 
     var TetherClass = {
       element: false,
-      enabled: false,
+      enabled: false
     };
 
     var Trigger = {
       HOVER: 'hover',
       FOCUS: 'focus',
       CLICK: 'click',
-      MANUAL: 'manual',
+      MANUAL: 'manual'
     };
 
     /**
@@ -3289,7 +3289,7 @@ if (typeof jQuery === 'undefined') {
           if (!context) {
             context = new this.constructor(
               event.currentTarget,
-              this._getDelegateConfig(),
+              this._getDelegateConfig()
             );
             $(event.currentTarget).data(dataKey, context);
           }
@@ -3354,7 +3354,7 @@ if (typeof jQuery === 'undefined') {
 
           var isInTheDom = $.contains(
             this.element.ownerDocument.documentElement,
-            this.element,
+            this.element
           );
 
           if (showEvent.isDefaultPrevented() || !isInTheDom) {
@@ -3399,7 +3399,7 @@ if (typeof jQuery === 'undefined') {
             classPrefix: CLASS_PREFIX,
             offset: this.config.offset,
             constraints: this.config.constraints,
-            addTargetClasses: false,
+            addTargetClasses: false
           });
 
           Util.reflow(tip);
@@ -3499,7 +3499,7 @@ if (typeof jQuery === 'undefined') {
 
         this.setElementContent(
           $tip.find(Selector.TOOLTIP_INNER),
-          this.getTitle(),
+          this.getTitle()
         );
 
         $tip.removeClass(ClassName.FADE + ' ' + ClassName.SHOW);
@@ -3509,7 +3509,7 @@ if (typeof jQuery === 'undefined') {
 
       Tooltip.prototype.setElementContent = function setElementContent(
         $element,
-        content,
+        content
       ) {
         var html = this.config.html;
         if (
@@ -3571,7 +3571,7 @@ if (typeof jQuery === 'undefined') {
               _this24.config.selector,
               function(event) {
                 return _this24.toggle(event);
-              },
+              }
             );
           } else if (trigger !== Trigger.MANUAL) {
             var eventIn =
@@ -3602,7 +3602,7 @@ if (typeof jQuery === 'undefined') {
         if (this.config.selector) {
           this.config = $.extend({}, this.config, {
             trigger: 'manual',
-            selector: '',
+            selector: ''
           });
         } else {
           this._fixTitle();
@@ -3611,12 +3611,12 @@ if (typeof jQuery === 'undefined') {
 
       Tooltip.prototype._fixTitle = function _fixTitle() {
         var titleType = _typeof(
-          this.element.getAttribute('data-original-title'),
+          this.element.getAttribute('data-original-title')
         );
         if (this.element.getAttribute('title') || titleType !== 'string') {
           this.element.setAttribute(
             'data-original-title',
-            this.element.getAttribute('title') || '',
+            this.element.getAttribute('title') || ''
           );
           this.element.setAttribute('title', '');
         }
@@ -3630,7 +3630,7 @@ if (typeof jQuery === 'undefined') {
         if (!context) {
           context = new this.constructor(
             event.currentTarget,
-            this._getDelegateConfig(),
+            this._getDelegateConfig()
           );
           $(event.currentTarget).data(dataKey, context);
         }
@@ -3673,7 +3673,7 @@ if (typeof jQuery === 'undefined') {
         if (!context) {
           context = new this.constructor(
             event.currentTarget,
-            this._getDelegateConfig(),
+            this._getDelegateConfig()
           );
           $(event.currentTarget).data(dataKey, context);
         }
@@ -3719,13 +3719,13 @@ if (typeof jQuery === 'undefined') {
           {},
           this.constructor.Default,
           $(this.element).data(),
-          config,
+          config
         );
 
         if (config.delay && typeof config.delay === 'number') {
           config.delay = {
             show: config.delay,
-            hide: config.delay,
+            hide: config.delay
           };
         }
 
@@ -3780,44 +3780,44 @@ if (typeof jQuery === 'undefined') {
           key: 'VERSION',
           get: function get() {
             return VERSION;
-          },
+          }
         },
         {
           key: 'Default',
           get: function get() {
             return Default;
-          },
+          }
         },
         {
           key: 'NAME',
           get: function get() {
             return NAME;
-          },
+          }
         },
         {
           key: 'DATA_KEY',
           get: function get() {
             return DATA_KEY;
-          },
+          }
         },
         {
           key: 'Event',
           get: function get() {
             return Event;
-          },
+          }
         },
         {
           key: 'EVENT_KEY',
           get: function get() {
             return EVENT_KEY;
-          },
+          }
         },
         {
           key: 'DefaultType',
           get: function get() {
             return DefaultType;
-          },
-        },
+          }
+        }
       ]);
 
       return Tooltip;
@@ -3866,21 +3866,21 @@ if (typeof jQuery === 'undefined') {
       template:
         '<div class="popover" role="tooltip">' +
         '<h3 class="popover-title"></h3>' +
-        '<div class="popover-content"></div></div>',
+        '<div class="popover-content"></div></div>'
     });
 
     var DefaultType = $.extend({}, Tooltip.DefaultType, {
-      content: '(string|element|function)',
+      content: '(string|element|function)'
     });
 
     var ClassName = {
       FADE: 'fade',
-      SHOW: 'show',
+      SHOW: 'show'
     };
 
     var Selector = {
       TITLE: '.popover-title',
-      CONTENT: '.popover-content',
+      CONTENT: '.popover-content'
     };
 
     var Event = {
@@ -3893,7 +3893,7 @@ if (typeof jQuery === 'undefined') {
       FOCUSIN: 'focusin' + EVENT_KEY,
       FOCUSOUT: 'focusout' + EVENT_KEY,
       MOUSEENTER: 'mouseenter' + EVENT_KEY,
-      MOUSELEAVE: 'mouseleave' + EVENT_KEY,
+      MOUSELEAVE: 'mouseleave' + EVENT_KEY
     };
 
     /**
@@ -3910,7 +3910,7 @@ if (typeof jQuery === 'undefined') {
 
         return _possibleConstructorReturn(
           this,
-          _Tooltip.apply(this, arguments),
+          _Tooltip.apply(this, arguments)
         );
       }
 
@@ -3984,44 +3984,44 @@ if (typeof jQuery === 'undefined') {
 
           get: function get() {
             return VERSION;
-          },
+          }
         },
         {
           key: 'Default',
           get: function get() {
             return Default;
-          },
+          }
         },
         {
           key: 'NAME',
           get: function get() {
             return NAME;
-          },
+          }
         },
         {
           key: 'DATA_KEY',
           get: function get() {
             return DATA_KEY;
-          },
+          }
         },
         {
           key: 'Event',
           get: function get() {
             return Event;
-          },
+          }
         },
         {
           key: 'EVENT_KEY',
           get: function get() {
             return EVENT_KEY;
-          },
+          }
         },
         {
           key: 'DefaultType',
           get: function get() {
             return DefaultType;
-          },
-        },
+          }
+        }
       ]);
 
       return Popover;

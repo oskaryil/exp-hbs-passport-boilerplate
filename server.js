@@ -8,6 +8,8 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
 const morgan = require('morgan');
+const helmet = require('helmet');
+const compression = require('compression');
 
 const db = require('./config/database');
 
@@ -30,7 +32,7 @@ const routes = require('./routes/index');
 app.set('views', viewdir);
 app.engine(
   'handlebars',
-  exphbs({ defaultLayout: 'layout', extname: '.handlebars' }),
+  exphbs({ defaultLayout: 'layout', extname: '.handlebars' })
 );
 app.set('view engine', 'handlebars');
 
@@ -38,14 +40,16 @@ app.use(bodyParser.json()); // Support JSON Encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // Support encoded bodies
 app.use(cookieParser()); // Use cookieparser
 app.use(express.static(basedir));
+app.use(helmet());
+app.use(compression());
 
 // Express Session
 app.use(
   session({
     secret: config.site.secret,
     saveUninitialized: true,
-    resave: true,
-  }),
+    resave: true
+  })
 );
 
 if (env === 'development') {
@@ -70,10 +74,10 @@ app.use(
       return {
         param: formParam,
         msg: msg,
-        value: value,
+        value: value
       };
-    },
-  }),
+    }
+  })
 );
 
 // Connect Flash

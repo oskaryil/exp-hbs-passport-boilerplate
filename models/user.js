@@ -8,66 +8,66 @@ var UserSchema = mongoose.Schema(
     email: {
       type: String,
       index: {
-        unique: true,
-      },
+        unique: true
+      }
     },
     username: {
       type: String,
       index: {
-        unique: true,
+        unique: true
       },
-      default: '',
+      default: ''
     },
     imgUrl: {
       type: String,
-      default: 'https://s3.amazonaws.com/whisperinvest-images/default.png',
+      default: 'https://s3.amazonaws.com/whisperinvest-images/default.png'
     },
     admin: {
       type: Boolean,
-      default: false,
+      default: false
     },
     ip: {
-      type: String,
+      type: String
     },
     local: {
       username: {
         type: String,
         index: {
           unique: true,
-          dropDups: true,
-        },
+          dropDups: true
+        }
       },
       password: {
-        type: String,
+        type: String
       },
       email: {
-        type: String,
+        type: String
       },
       name: {
-        type: String,
-      },
+        type: String
+      }
     },
     google: {
       id: String,
       token: String,
       email: String,
-      name: String,
+      name: String
     },
     facebook: {
       id: String,
       token: String,
       email: String,
-      name: String,
+      name: String
     },
     github: {
       id: String,
       token: String,
       email: String,
       name: String,
-      username: String,
-    },
+      username: String
+    }
   },
-  { timestamps: true },
+  { timestamps: true }
 );
 
 UserSchema.post('save', function(error, doc, next) {
