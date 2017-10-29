@@ -12,7 +12,7 @@ const prodConfig = {
 
 const defaultConfig = {
 	site: {
-		port: parseInt(process.env.PORT, 10)|| 3000,
+		port: parseInt(process.env.PORT, 10) || 3000,
 		name: process.env.NAME,
 		slug: process.env.SLUG,
 		secret: process.env.SECRET,
