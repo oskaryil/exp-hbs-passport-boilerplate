@@ -38,9 +38,9 @@ If you use yarn:
 `$ yarn install -D`
 
 ## Rename
-`config.example.json to config.json`
+`.env.example to .env`
 ### Linux users
-`$ cp config.example.json config.json`
+`$ cp .env.example .env`
 
 ## Run
 `$ npm start`

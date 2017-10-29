@@ -1,18 +1,17 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const User = require('../models/user.js');
-const config = require('../config.json');
+const config = require('../config/constants');
 
 const login = (req, res) => {
   res.render('login', {
-    title: 'Login | ' + config.site.name 
+    title: 'Login | ' + config.site.name
   });
 };
 
 const postLogin = (req, res, next) => {
-  req.assert('username', 'Username can\'t be empty').notEmpty();
+  req.assert('username', "Username can't be empty").notEmpty();
   req.assert('password', 'Password cannot be blank').notEmpty();
-
 
   const errors = req.validationErrors();
   if (errors) {
@@ -23,14 +22,17 @@ const postLogin = (req, res, next) => {
   }
 
   passport.authenticate('local', (err, user, info) => {
-    
-    if (err) { return next(err); }
+    if (err) {
+      return next(err);
+    }
     if (!user) {
       req.flash('error_msg', info.message);
       return res.redirect('/login');
     }
-    req.logIn(user, (err) => {
-      if (err) { return next(err); }
+    req.logIn(user, err => {
+      if (err) {
+        return next(err);
+      }
       req.flash('success_msg', 'Success! You are logged in.');
       res.redirect(req.session.returnTo || '/');
     });
@@ -39,7 +41,7 @@ const postLogin = (req, res, next) => {
 
 const signup = (req, res) => {
   res.render('register', {
-    title: 'Sign up | ' + config.site.name 
+    title: 'Sign up | ' + config.site.name
   });
 };
 
@@ -55,10 +57,12 @@ const postSignup = (req, res, next) => {
   req.checkBody('email', 'Email is not valid').isEmail();
   req.checkBody('username', 'Username is required').notEmpty();
   req.checkBody('password', 'Password is required').notEmpty();
-  req.checkBody('password2', 'Passwords do not match').equals(req.body.password);
+  req
+    .checkBody('password2', 'Passwords do not match')
+    .equals(req.body.password);
   const errors = req.validationErrors();
 
-  if(errors) {
+  if (errors) {
     res.render('register', {
       title: 'Sign up | ' + config.site.name,
       errors: errors
@@ -74,18 +78,17 @@ const postSignup = (req, res, next) => {
     newUser.local.password = password;
 
     User.createUser(newUser, function(err, user) {
-      if(err) return next(err);
+      if (err) return next(err);
     });
 
     req.flash('success_msg', 'You are registered and can now log in');
     res.redirect('/');
   }
- 
 };
 
 module.exports = {
-	login,
-	signup,
-	postLogin,
-	postSignup
+  login,
+  signup,
+  postLogin,
+  postSignup
 };
