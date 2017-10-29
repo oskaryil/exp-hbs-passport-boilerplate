@@ -16,6 +16,24 @@ const defaultConfig = {
 		name: process.env.NAME,
 		slug: process.env.SLUG,
 		secret: process.env.SECRET,
+		oAuth: {
+			host: process.env.OAUTH_HOST,
+			githubAuth: {
+				clientID: process.env.GITHUB_AUTH_CLIENT_ID,
+				clientSecret: process.env.GITHUB_AUTH_CLIENT_SECRET
+			},
+			facebookAuth: {
+				clientID: process.env.FACEBOOK_AUTH_CLIENT_ID,
+				clientSecret: process.env.FACEBOOK_AUTH_CLIENT_SECRET,
+				callbackURL: process.env.FACEBOOK_AUTH_CALLBACK_URL
+			},
+			googleAuth: {
+				clientID: process.env.GOOGLE_AUTH_CLIENT_ID,
+				clientSecret: process.env.GOOGLE_AUTH_CLIENT_SECRET,
+				callbackURL: process.env.GOOGLE_AUTH_CALLBACK_URL
+			}
+		},
+		analytics: process.env.ANALYTICS
 	},
 };
 

@@ -1,5 +1,5 @@
-var mongoose = require('mongoose');
-var bcrypt = require('bcryptjs');
+const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
 
 // User Schema
 var UserSchema = mongoose.Schema({
@@ -8,14 +8,12 @@ var UserSchema = mongoose.Schema({
     type: String,
     index: {
       unique: true,
-      dropDups: true
     }
   },
   username: {
     type: String,
     index: {
       unique: true,
-      dropDups: true
     },
     default: ''
   },
@@ -26,10 +24,6 @@ var UserSchema = mongoose.Schema({
   admin: {
     type: Boolean,
     default: false
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now
   },
   ip: {
     type: String,
@@ -71,7 +65,7 @@ var UserSchema = mongoose.Schema({
     name: String,
     username: String
   }
-});
+}, { timestamps: true });
 
 UserSchema.post('save', function(error, doc, next) {
   if (error.name === 'MongoError' && error.code === 11000) {
@@ -81,10 +75,9 @@ UserSchema.post('save', function(error, doc, next) {
   }
 });
 
-var User = module.exports = mongoose.model('User', UserSchema);
+const User = module.exports = mongoose.model('User', UserSchema);
 
 module.exports.createUser = function(newUser, callback) {
-  var bcrypt = require('bcryptjs');
   bcrypt.genSalt(10, function(err, salt) {
       bcrypt.hash(newUser.local.password, salt, function(err, hash) {
           newUser.local.password = hash;
