@@ -2,9 +2,15 @@ const router = require('express').Router();
 const UserController = require('../controllers/user.controller.js');
 const config = require('../config/constants');
 
-router.route('/login').get(UserController.login).post(UserController.postLogin);
+router
+  .route('/login')
+  .get(UserController.login)
+  .post(UserController.postLogin);
 
-router.route('/register').get(UserController.signup).post(UserController.postSignup);
+router
+  .route('/register')
+  .get(UserController.signup)
+  .post(UserController.postSignup);
 
 // POST
 // router.post('/locallogin', passport.authenticate('local', {
@@ -16,4 +22,3 @@ router.route('/register').get(UserController.signup).post(UserController.postSig
 // });
 
 module.exports = router;
-
