@@ -8,17 +8,14 @@ const flash = require("connect-flash");
 const session = require("express-session");
 const passport = require("passport");
 const morgan = require("morgan");
-const mongoose = require("mongoose");
+
+const db = require('./config/database');
 
 // ENV
 const env = process.env.NODE_ENV || "development";
 
 // Config
-const config = require("./config.json");
-
-// DB Connection
-mongoose.connect("mongodb://localhost/" + config.site.slug);
-const db = mongoose.connection;
+const config = require("./config/constants");
 
 const app = express();
 
@@ -28,7 +25,7 @@ const viewdir = __dirname + "/views/";
 const basedir = __dirname + "/public/";
 
 // Main Index Route
-const index = require("./routes/index");
+const routes = require('./routes/index');
 
 app.set("views", viewdir);
 app.engine(
@@ -97,17 +94,9 @@ app.use(function(err, req, res, next) {
   res.status(500).send("Something broke!");
 });
 
-//Make our db accessible to our router
-app.use(function(req, res, next) {
-  req.db = db;
-  next();
-});
-
 // ASSIGNING ROUTES TO APP
-app.use("/", index);
+app.use(routes);
 
-app.set("port", process.env.PORT || config.site.port);
-
-app.listen(app.get("port"), function() {
-  console.log(config.site.name + " running on port " + app.get("port"));
+app.listen(config.site.port, () => {
+  console.log(`${config.site.name} running on port ${config.site.port} 😀 🖥`); 
 });

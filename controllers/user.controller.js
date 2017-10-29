@@ -1,7 +1,7 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const User = require('../models/user.js');
-const config = require('../config.json');
+const config = require('../config/constants');
 
 const login = (req, res) => {
   res.render('login', {
