@@ -32,7 +32,7 @@
     "express-validator": "^4.2.1",
     "gulp-sourcemaps": "^2.4.1",
     "helmet": "^3.9.0",
-    "mongodb": "^2.2.24",
+    "mongodb": "^3.1.0-beta4",
     "mongoose": "^4.8.3",
     "morgan": "^1.8.1",
     "passport": "^0.4.0",
