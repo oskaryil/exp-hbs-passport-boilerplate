@@ -33,7 +33,7 @@
     "gulp-sourcemaps": "^2.4.1",
     "helmet": "^3.9.0",
     "mongodb": "^2.2.24",
-    "mongoose": "^4.8.3",
+    "mongoose": "^5.4.10",
     "morgan": "^1.8.1",
     "passport": "^0.4.0",
     "passport-facebook": "^2.1.1",
