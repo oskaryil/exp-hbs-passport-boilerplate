@@ -27,7 +27,7 @@
     "cookie-parser": "^1.4.3",
     "dotenv": "^4.0.0",
     "express": "^4.14.1",
-    "express-handlebars": "^3.0.0",
+    "express-handlebars": "^3.0.1",
     "express-session": "^1.15.1",
     "express-validator": "^4.2.1",
     "gulp-sourcemaps": "^2.4.1",
