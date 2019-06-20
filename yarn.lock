@@ -19,42 +19,6 @@
     normalize-path "^2.0.1"
     through2 "^2.0.3"
 
-"@types/body-parser@*":
-  version "1.16.6"
-  resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.16.6.tgz#ccba8895337444e07f1134dab696edaf969b09a9"
-  dependencies:
-    "@types/express" "*"
-    "@types/node" "*"
-
-"@types/express-serve-static-core@*":
-  version "4.0.54"
-  resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.0.54.tgz#c4f8574d6bc5a616ccd7d60a196baef052f0c0b4"
-  dependencies:
-    "@types/node" "*"
-
-"@types/express@*", "@types/express@~4.0.34":
-  version "4.0.38"
-  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.0.38.tgz#500e0524cb57ea8e3119efd5ca7ab8fca29ad9a5"
-  dependencies:
-    "@types/body-parser" "*"
-    "@types/express-serve-static-core" "*"
-    "@types/serve-static" "*"
-
-"@types/mime@*":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@types/mime/-/mime-2.0.0.tgz#5a7306e367c539b9f6543499de8dd519fac37a8b"
-
-"@types/node@*":
-  version "8.0.47"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.47.tgz#968e596f91acd59069054558a00708c445ca30c2"
-
-"@types/serve-static@*":
-  version "1.7.32"
-  resolved "https://registry.yarnpkg.com/@types/serve-static/-/serve-static-1.7.32.tgz#0f6732e4dab0813771dd8fc8fe14940f34728b4c"
-  dependencies:
-    "@types/express-serve-static-core" "*"
-    "@types/mime" "*"
-
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -1383,13 +1347,13 @@ express-session@^1.15.1:
     uid-safe "~2.1.5"
     utils-merge "1.0.1"
 
-express-validator@^4.2.1:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/express-validator/-/express-validator-4.3.0.tgz#60218a5778c59d5e778b89ae4e00b76f8510ef78"
+express-validator@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/express-validator/-/express-validator-6.0.0.tgz#1968c6c328ca72f8d27266f3b52b7a43d3cd42eb"
+  integrity sha512-QDd7D96jULdQNNFw1lQKyRJtFIN+k/MN3e5fBW93AkxIk5RcV/B0BV+i4ka7fD0/2FsqOUvyQCKlx1mg6g/aXg==
   dependencies:
-    "@types/express" "~4.0.34"
-    lodash "^4.16.0"
-    validator "~8.2.0"
+    lodash "^4.17.11"
+    validator "^11.0.0"
 
 express@^4.14.1:
   version "4.16.2"
@@ -2587,9 +2551,14 @@ lodash.templatesettings@^3.0.0:
     lodash._reinterpolate "^3.0.0"
     lodash.escape "^3.0.0"
 
-lodash@^4.0.0, lodash@^4.14.0, lodash@^4.16.0, lodash@^4.17.4, lodash@~4.17.4:
+lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.4, lodash@~4.17.4:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+
+lodash@^4.17.11:
+  version "4.17.11"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
+  integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
 
 lodash@~1.0.1:
   version "1.0.2"
@@ -4191,9 +4160,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "~1.0.0"
     spdx-expression-parse "~1.0.0"
 
-validator@~8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/validator/-/validator-8.2.0.tgz#3c1237290e37092355344fef78c231249dab77b9"
+validator@^11.0.0:
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/validator/-/validator-11.0.0.tgz#fb10128bfb1fd14ce4ed36b79fc94289eae70667"
+  integrity sha512-+wnGLYqaKV2++nUv60uGzUJyJQwYVOin6pn1tgEiFCeCQO60yeu3Og9/yPccbBX574kxIcEJicogkzx6s6eyag==
 
 vary@~1.1.2:
   version "1.1.2"
